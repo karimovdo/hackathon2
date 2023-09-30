@@ -30,4 +30,6 @@ shap
 sklearn
 сatboost import cv
 
+![Оценка качества модели](image.png)
+
 

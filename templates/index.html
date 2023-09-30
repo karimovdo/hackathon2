@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение для прогнозирования</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Прогнозирование поступлений</h2>
+    <form action="/" method="post">
+        <div class="row">
+            <!-- Первый столбец предикторов -->
+            <div class="col-md-4">
+                <label for="feature_0">Предиктор 1:</label>
+                <input type="text" class="form-control" name="feature_0">
+                <label for="feature_1">Предиктор 2:</label>
+                <input type="text" class="form-control" name="feature_1">
+                <label for="feature_2">Предиктор 3:</label>
+                <input type="text" class="form-control" name="feature_2">
+                <label for="feature_3">Предиктор 4:</label>
+                <input type="text" class="form-control" name="feature_3">
+                <label for="feature_4">Предиктор 5:</label>
+                <input type="text" class="form-control" name="feature_4">
+            </div>
+            
+            <!-- Второй столбец предикторов -->
+            <div class="col-md-4">
+                <label for="feature_5">Предиктор 6:</label>
+                <input type="text" class="form-control" name="feature_5">
+                <label for="feature_6">Предиктор 7:</label>
+                <input type="text" class="form-control" name="feature_6">
+                <label for="feature_7">Предиктор 8:</label>
+                <input type="text" class="form-control" name="feature_7">
+                <label for="feature_8">Предиктор 9:</label>
+                <input type="text" class="form-control" name="feature_8">
+                <label for="feature_9">Предиктор 10:</label>
+                <input type="text" class="form-control" name="feature_9">
+            </div>
+            
+            <!-- Третий столбец предикторов -->
+            <div class="col-md-4">
+                <label for="feature_10">Предиктор 11:</label>
+                <input type="text" class="form-control" name="feature_10">
+                <label for="feature_11">Предиктор 12:</label>
+                <input type="text" class="form-control" name="feature_11">
+                <label for="feature_12">Предиктор 13:</label>
+                <input type="text" class="form-control" name="feature_12">
+                <label for="feature_13">Предиктор 14:</label>
+                <input type="text" class="form-control" name="feature_13">
+                <label for="feature_14">Предиктор 15:</label>
+                <input type="text" class="form-control" name="feature_14">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Получить прогноз</button>
+    </form>
+    
+    <!-- Вывод прогноза -->
+    {% if prediction %}
+    <h3 class="mt-5">Прогнозированное значение: {{ prediction }}</h3>
+    {% endif %}
+    
+    <!-- Вывод графика SHAP -->
+    <!-- ... ваш код для отображения графика SHAP ... -->
+</div>
+</body>
+</html>
+

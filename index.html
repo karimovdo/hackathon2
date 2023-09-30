@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Предсказание поступлений</title>
+</head>
+<body>
+    <form action="/" method="post">
+        {% for i in range(15) %}
+        <label for="feature_{{ i }}">Предиктор {{ i+1 }}:</label>
+        <input type="number" id="feature_{{ i }}" name="feature_{{ i }}" required><br><br>
+        {% endfor %}
+        <input type="submit" value="Предсказать">
+    </form>
+
+    {% if prediction %}
+    <h2>Предсказанное значение: {{ prediction }}</h2>
+    <!-- Здесь можно добавить код для отображения графика SHAP -->
+    {% endif %}
+</body>
+</html>
